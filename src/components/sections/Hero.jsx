@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'
@@ -6,12 +6,20 @@ import Container from '../ui/Container'
 import Button from '../ui/Button'
 
 const Hero = () => {
- const navigate = useNavigate()
+  const navigate = useNavigate()
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  // Animation variants
+  useEffect(() => {
+    // Preload background image
+    const img = new Image()
+    img.src = '/hero-bg-optimized.webp'
+    img.onload = () => setIsLoaded(true)
+  }, [])
+
+  // Animation variants - OPTIMIZED
   const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   }
 
   const staggerContainer = {
@@ -19,8 +27,8 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       }
     }
   }
@@ -28,17 +36,21 @@ const Hero = () => {
   return (
     <section
       id="main-content"
-      className="relative bg-navy text-white min-h-screen flex items-center overflow-hidden"
-      style={{ backgroundImage: "url('/backgoundimage.png')" }}
+      className={`relative bg-navy text-white min-h-screen flex items-center overflow-hidden transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      style={{ 
+        backgroundImage: "url('/hero-bg-optimized.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
     >
       {/* Enhanced gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/90 to-brand-blue/20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(56,189,248,0.15),_transparent_70%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(45,212,191,0.1),_transparent_60%)]"></div>
       
-      {/* Animated background particles */}
+      {/* Simplified background particles - reduced from 6 to 3 */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-brand-cyan/30 rounded-full"
@@ -51,10 +63,10 @@ const Hero = () => {
               opacity: [0.3, 0.8, 0.3]
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: 5 + Math.random() * 2,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.3
+              delay: i * 0.5
             }}
           />
         ))}
