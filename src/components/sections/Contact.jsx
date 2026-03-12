@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Container from '../ui/Container'
-import SectionTitle from '../ui/SectionTitle'
 import Button from '../ui/Button'
 import { MdEmail, MdSupportAgent, MdOutlineAccessTime } from 'react-icons/md'
 
@@ -59,8 +58,8 @@ Message: ${formData.message}`
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+      {/* Overlay for better readability - NO BLUR */}
+      <div className="absolute inset-0 bg-white/95"></div>
       
       <div className="relative z-10 pt-10 pb-20 w-full">
         <Container>
