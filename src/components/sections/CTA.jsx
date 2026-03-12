@@ -8,7 +8,9 @@ const CTA = () => {
  const navigate = useNavigate()
 
   return (
-    <section className="py-20 bg-navy text-white">
+    <section className="py-20 bg-navy text-white relative overflow-hidden">
+      {/* subtle radial glow behind CTA */}
+      <div className="absolute inset-0 pointer-events-none -z-10" style={{ background: 'radial-gradient(60% 40% at 10% 20%, rgba(56,189,248,0.06), transparent 20%), radial-gradient(50% 40% at 90% 80%, rgba(11,102,209,0.04), transparent 25%)' }} />
       <Container>
         <motion.div className="text-center"
           initial={{ opacity: 0, y: 12 }}

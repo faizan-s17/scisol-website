@@ -1,9 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import SectionBackground from '../ui/SectionBackground'
 
 const About = () => {
   return (
-    <section className="py-20 bg-white">
+    <SectionBackground variant="odd" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div className="max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 12 }}
@@ -25,7 +26,7 @@ const About = () => {
           </p>
         </motion.div>
       </div>
-    </section>
+    </SectionBackground>
   )
 }
 

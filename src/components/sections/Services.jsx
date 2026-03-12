@@ -4,10 +4,11 @@ import { FaPills, FaClipboardCheck, FaFileExport, FaLeaf } from 'react-icons/fa'
 import { MdMedicalServices } from 'react-icons/md'
 import Container from '../ui/Container'
 import SectionTitle from '../ui/SectionTitle'
+import SectionBackground from '../ui/SectionBackground'
 
 const Services = () => {
  return (
-  <section id="main-content" className="py-10 bg-off-white">
+  <SectionBackground id="main-content" variant="even" className="py-10">
     <Container>
       <SectionTitle title="Our Services" subtitle="Regulatory Consulting" centered={false} />
 
@@ -50,7 +51,7 @@ const Services = () => {
           ],
           note: 'Guidance for country-specific export requirements and certification.'
         }].map((s, idx) => (
-          <motion.div key={idx} className="card p-6" whileHover={{ scale: 1.01 }} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <motion.div key={idx} className="card card-glass p-6" whileHover={{ scale: 1.01 }} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="flex items-center mb-4">
               <div className="bg-brand-blue w-12 h-12 rounded-full flex items-center justify-center mr-4">{s.icon}</div>
               <h3 className="text-xl font-semibold text-navy">{s.title}</h3>
@@ -63,7 +64,7 @@ const Services = () => {
         ))}
       </div>
     </Container>
-  </section>
+    </SectionBackground>
  )
 }
 

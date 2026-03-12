@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-white mt-12">
+    <footer className="bg-navy text-white mt-12 relative overflow-hidden">
+      <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(180deg, rgba(11,102,209,0.06), rgba(15,23,42,0.06))' }} />
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>

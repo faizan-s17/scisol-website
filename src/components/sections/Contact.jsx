@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Container from '../ui/Container'
 import SectionTitle from '../ui/SectionTitle'
+import SectionBackground from '../ui/SectionBackground'
 import Button from '../ui/Button'
 import { MdEmail, MdSupportAgent, MdOutlineAccessTime } from 'react-icons/md'
 
@@ -13,9 +14,32 @@ const Contact = () => {
   })
 
   const handleSubmit = (e) => {
-   e.preventDefault()
-    console.log('Form submitted:', formData)
-    // TODO: Add real form submission (API or email)
+    e.preventDefault()
+    
+    // Format the message for WhatsApp
+    const whatsappMessage = `Hello, I would like to request a consultation.
+    
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject}
+Message: ${formData.message}`
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage)
+    
+    // WhatsApp number (923040888221)
+    const whatsappUrl = `https://wa.me/923040888221?text=${encodedMessage}`
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank')
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
   }
 
   const handleChange = (e) => {
@@ -26,7 +50,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="main-content" className="pt-10 pb-20 bg-off-white">
+    <SectionBackground id="main-content" variant="odd" className="pt-10 pb-20">
       <Container>
         <div className="text-center mb-16">
           <div className="text-sm font-semibold text-brand-cyan uppercase tracking-wider">GET EXPERT REGULATORY SUPPORT</div>
@@ -117,7 +141,7 @@ const Contact = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </SectionBackground>
   )
 }
 
