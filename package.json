@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
+    "optimize:all": "node scripts/optimize-all-images.js",
     "optimize:images": "node scripts/optimize-images.js"
   },
   "dependencies": {

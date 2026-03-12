@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/images/logo.png'
 
 const Navbar = () => {
  const [isVisible, setIsVisible] = useState(true)
@@ -40,7 +39,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
           <Link to="/">
-            <img src={logo} alt="Sci-Sol Logo" className="h-14 w-auto hover:opacity-95 transition" />
+            <img src="/logos/logo-optimized.webp" alt="Sci-Sol Logo" className="h-14 w-auto hover:opacity-95 transition" />
           </Link>
           <span className="hidden md:block text-sm text-muted-slate">Regulatory Consulting — Pakistan</span>
         </div>

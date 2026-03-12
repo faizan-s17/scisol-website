@@ -52,7 +52,7 @@ Message: ${formData.message}`
       id="main-content"
       className="relative min-h-screen flex items-center py-20"
       style={{
-        backgroundImage: "url('/contactusbg.svg')",
+        backgroundImage: "url('/contact-bg-optimized.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
