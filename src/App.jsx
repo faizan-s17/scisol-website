@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'))
@@ -26,6 +27,8 @@ function App() {
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        {/* Vercel Speed Insights - Collects real user performance metrics */}
+        <SpeedInsights />
       </Suspense>
     </Router>
   )
