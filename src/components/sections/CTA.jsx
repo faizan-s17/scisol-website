@@ -9,7 +9,7 @@ const CTA = () => {
   return (
     <section className="py-12 md:py-20 bg-navy text-white relative overflow-hidden">
       {/* MOBILE: Lighter gradient overlay - better visibility on mobile */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy/80 via-navy/70 to-brand-blue/40 md:hidden" aria-hidden="true" />
+      <div className="absolute inset-0 pointer-events-none -z-10 bg-gradient-to-br from-navy/80 via-navy/70 to-brand-blue/40 md:hidden" aria-hidden="true" />
       <div className="hidden md:block absolute inset-0 pointer-events-none -z-10" style={{ background: 'radial-gradient(60% 40% at 10% 20%, rgba(56,189,248,0.06), transparent 20%), radial-gradient(50% 40% at 90% 80%, rgba(11,102,209,0.04), transparent 25%)' }} />
       <Container>
         <div className="text-center">
