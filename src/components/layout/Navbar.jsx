@@ -37,13 +37,15 @@ const Navbar = () => {
   >
     <div className="container px-4">
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
           <Link to="/">
-            <img src="/logos/logo-optimized.webp" alt="Sci-Sol Logo" className="h-14 w-auto hover:opacity-95 transition" />
+            {/* MOBILE: Smaller logo on mobile */}
+            <img src="/logos/logo-optimized.webp" alt="Sci-Sol Logo" className="h-10 md:h-14 w-auto" />
           </Link>
           <span className="hidden md:block text-sm text-muted-slate">Regulatory Consulting — Pakistan</span>
         </div>
 
+        {/* DESKTOP: Full navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className={`text-white transition font-medium text-sm ${location.pathname === '/' ? 'text-brand-cyan' : 'hover:text-brand-cyan'}`}>
            Home
@@ -62,8 +64,14 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* MOBILE: Hamburger menu - Touch-friendly sizing */}
         <div className="md:hidden">
-          <button onClick={() => setOpen(!open)} aria-expanded={open} aria-label={open ? 'Close menu' : 'Open menu'} className="p-2 rounded-md bg-white/5 text-white">
+          <button 
+            onClick={() => setOpen(!open)} 
+            aria-expanded={open} 
+            aria-label={open ? 'Close menu' : 'Open menu'} 
+            className="p-2.5 rounded-md bg-white/5 text-white min-w-[44px] min-h-[44px] flex items-center justify-center"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={open ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} />
             </svg>
@@ -71,12 +79,13 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* MOBILE MENU - Touch-friendly links */}
       {open && (
-        <div className="md:hidden mt-3 space-y-2 pb-4">
-          <Link to="/" onClick={() => setOpen(false)} className="block px-3 py-2 text-white rounded-md hover:bg-white/5">Home</Link>
-          <Link to="/about" onClick={() => setOpen(false)} className="block px-3 py-2 text-white rounded-md hover:bg-white/5">About</Link>
-          <Link to="/services" onClick={() => setOpen(false)} className="block px-3 py-2 text-white rounded-md hover:bg-white/5">Services</Link>
-          <Link to="/contact" onClick={() => setOpen(false)} className="block px-3 py-2 text-white rounded-md hover:bg-white/5">Contact</Link>
+        <div className="md:hidden mt-3 space-y-1 pb-4">
+          <Link to="/" onClick={() => setOpen(false)} className="block px-4 py-3 text-white rounded-md hover:bg-white/5 min-h-[44px]">Home</Link>
+          <Link to="/about" onClick={() => setOpen(false)} className="block px-4 py-3 text-white rounded-md hover:bg-white/5 min-h-[44px]">About</Link>
+          <Link to="/services" onClick={() => setOpen(false)} className="block px-4 py-3 text-white rounded-md hover:bg-white/5 min-h-[44px]">Services</Link>
+          <Link to="/contact" onClick={() => setOpen(false)} className="block px-4 py-3 text-white rounded-md hover:bg-white/5 min-h-[44px]">Contact</Link>
         </div>
       )}
     </div>

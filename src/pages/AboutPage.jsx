@@ -9,7 +9,7 @@ const AboutPage = () => {
   <div className="pt-16">
     <Navbar />
 
-    <Container>
+    <Container className="pt-24 pb-8">
       <SectionTitle title="About Sci‑Sol" subtitle="REGULATORY CONSULTING" centered={true} />
 
       <p className="text-lg text-muted-slate text-center max-w-3xl mx-auto mb-12">Your dedicated regulatory solutions provider focused on Pakistan’s pharmaceutical growth, DRAP compliance, and export readiness.</p>

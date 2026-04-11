@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Container from '../ui/Container'
 import Button from '../ui/Button'
-import { MdEmail, MdSupportAgent, MdOutlineAccessTime } from 'react-icons/md'
+import { MdEmail, MdSupportAgent, MdOutlineAccessTime, MdPhone } from 'react-icons/md'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,8 +25,8 @@ Message: ${formData.message}`
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage)
     
-    // WhatsApp number (923040888221)
-    const whatsappUrl = `https://wa.me/923040888221?text=${encodedMessage}`
+    // WhatsApp number (923257236785)
+    const whatsappUrl = `https://wa.me/923257236785?text=${encodedMessage}`
     
     // Open WhatsApp in new tab
     window.open(whatsappUrl, '_blank')
@@ -50,16 +50,17 @@ Message: ${formData.message}`
   return (
     <section
       id="main-content"
-      className="relative min-h-screen flex items-center py-20"
+      className="relative min-h-screen flex items-center py-12 md:py-20"
       style={{
         backgroundImage: "url('/contact-bg-optimized.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        /* MOBILE: Disable fixed background attachment on mobile (causes performance issues) */
+        backgroundAttachment: 'scroll'
       }}
     >
-      {/* Overlay for better readability - NO BLUR */}
-      <div className="absolute inset-0 bg-white/95"></div>
+      {/* MOBILE: Add semi-transparent overlay for better readability on small screens */}
+      <div className="absolute inset-0 bg-white/40 md:bg-white/30" aria-hidden="true"></div>
       
       <div className="relative z-10 pt-10 pb-20 w-full">
         <Container>
@@ -82,7 +83,17 @@ Message: ${formData.message}`
                     </div>
                     <div>
                       <p className="text-sm text-muted-slate font-medium">Email</p>
-                      <a href="mailto:info@scisolreg.com" className="text-navy hover:text-brand-cyan font-medium">info@scisolreg.com</a>
+                      <a href="mailto:scientificsolutionpk@gmail.com" className="text-navy hover:text-brand-cyan font-medium">scientificsolutionpk@gmail.com</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-md bg-brand-cyan/10 text-brand-cyan">
+                      <MdPhone size={20} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-slate font-medium">Phone</p>
+                      <a href="tel:+923257236785" className="text-navy hover:text-brand-cyan font-medium">0325 7236785</a>
                     </div>
                   </div>
 
@@ -120,32 +131,32 @@ Message: ${formData.message}`
               </div>
             </div>
 
-            {/* Right: Contact Form */}
+            {/* Right: Contact Form - Smaller padding on mobile */}
             <div>
-              <div className="bg-white rounded-xl p-8 shadow-xl">
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="bg-white rounded-xl p-5 md:p-8 shadow-xl">
+                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                    <input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan" placeholder="Your name" />
+                    <input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full px-3 py-2.5 md:px-4 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan text-sm md:text-base" placeholder="Your name" />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan" placeholder="you@company.com" />
+                    <input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full px-3 py-2.5 md:px-4 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan text-sm md:text-base" placeholder="you@company.com" />
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                    <input id="subject" name="subject" type="text" required value={formData.subject} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan" placeholder="Subject" />
+                    <input id="subject" name="subject" type="text" required value={formData.subject} onChange={handleChange} className="w-full px-3 py-2.5 md:px-4 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan text-sm md:text-base" placeholder="Subject" />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea id="message" name="message" rows="7" required value={formData.message} onChange={handleChange} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan" placeholder="Tell us about your project or question"></textarea>
+                    <textarea id="message" name="message" rows="5" md:rows="7" required value={formData.message} onChange={handleChange} className="w-full px-3 py-2.5 md:px-4 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan text-sm md:text-base" placeholder="Tell us about your project or question"></textarea>
                   </div>
 
                   <div>
-                    <Button type="submit" className="w-full py-3">Send Message</Button>
+                    <Button type="submit" className="w-full py-2.5 md:py-3 min-h-[44px]">Send Message</Button>
                   </div>
                 </form>
               </div>
