@@ -12,17 +12,12 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold mb-8 text-gray-800">About Scisol</h2>
+          <h2 className="text-4xl font-bold mb-8 text-gray-800">A Convergent Platform of Pharmaceutical Professionals</h2>
           <p className="text-lg text-gray-600 mb-6">
-            SCISOL is a leading scientific solutions provider, dedicated to 
-            advancing research and innovation. With years of experience in the 
-            scientific community, we bridge the gap between theoretical research 
-            and practical applications.
+            Scientific Solutions is an independent regulatory and compliance advisory firm established to consolidate the expertise of senior professionals drawn from the disciplines of GMP compliance, quality assurance, quality control, validation sciences, pharmaceutical engineering, facility design, regulatory affairs, clinical research, and biologics development.
           </p>
           <p className="text-lg text-gray-600 mb-8">
-            Our team of expert scientists and researchers work tirelessly to 
-            deliver groundbreaking solutions that drive progress across multiple 
-            disciplines.
+            We engage directly with manufacturers, emerging pharmaceutical enterprises, healthcare product developers, and public health institutions — delivering bespoke, evidence-based advisory services aligned with the most demanding international regulatory frameworks.
           </p>
         </motion.div>
       </div>

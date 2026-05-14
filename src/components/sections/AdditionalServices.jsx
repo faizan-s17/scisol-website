@@ -6,28 +6,28 @@ import SectionBackground from '../ui/SectionBackground'
 const AdditionalServices = () => {
  const services = [
    {
-     title: 'Regulatory Intelligence',
-     desc: 'Stay updated on DRAP guidelines, digital licensing and policy changes'
+     title: 'GMP Compliance and Quality Governance',
+     desc: 'Senior practitioners applying hands-on inspection experience, remediation discipline, and operational governance to strengthen regulated environments.'
    },
    {
-     title: 'Export Strategy',
-     desc: 'Market assessment and pathway planning for MENA, Africa, ASEAN and beyond'
+     title: 'Regulatory Affairs and Market Access',
+     desc: 'Structured counsel across submission strategy, technical documentation, and international registration pathways for local and export markets.'
    },
    {
-     title: 'Compliance & Training',
-     desc: 'Compliance audits, pharmacovigilance setup and staff training'
+     title: 'Validation Sciences and Facility Design',
+     desc: 'Integrated support across validation, qualification, engineering, and facility planning to align assets with GMP expectations from inception.'
    },
    {
-     title: 'R&D Collaboration',
-     desc: 'BE support, API sourcing guidance and R&D advisory'
+     title: 'Clinical, Biologics, and Development Pathways',
+     desc: 'Advisory support for emerging products, biological platforms, and clinical governance requirements within regulated healthcare ecosystems.'
    }
  ]
 
  return (
   <SectionBackground variant="odd" className="py-20">
     <Container>
-      <SectionTitle title="Additional Regulatory Support" subtitle="Pakistan-specific" centered={true} />
-      <p className="text-center text-muted-slate max-w-3xl mx-auto mb-8">Our additional consulting services help pharmaceutical companies remain compliant with evolving DRAP rules and maintain operational readiness for exports.</p>
+      <SectionTitle title="A Convergent Platform of Pharmaceutical Professionals" subtitle="Who We Are" centered={true} />
+      <p className="text-center text-muted-slate max-w-4xl mx-auto mb-8">Scientific Solutions is an independent regulatory and compliance advisory firm established to consolidate the expertise of senior professionals drawn from the disciplines of GMP compliance, quality assurance, quality control, validation sciences, pharmaceutical engineering, facility design, regulatory affairs, clinical research, and biologics development.</p>
 
       <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {services.map((s, i) => (

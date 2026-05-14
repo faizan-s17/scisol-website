@@ -54,7 +54,7 @@ const Hero = () => {
                 className="inline-flex items-center gap-1.5 md:gap-2 px-2.5 py-1 md:px-4 md:py-2 bg-brand-blue/20 border border-brand-cyan/30 rounded-full text-brand-cyan text-[10px] md:text-sm font-medium"
               >
                 <FaCheckCircle className="text-[10px] md:text-xs" />
-                <span>Trusted by 750+ Pharmaceutical Leaders</span>
+                <span>Pharmaceutical Regulatory & Compliance Advisory</span>
               </div>
 
               {/* Main Heading - LCP Text Element - Smaller on mobile */}
@@ -65,15 +65,14 @@ const Hero = () => {
                 </h1>
                 
                 <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl">
-                  Expert regulatory consulting for Pakistan's pharmaceutical & medical device sectors
+                  A multidisciplinary platform of senior pharmaceutical professionals delivering integrated regulatory strategy, GMP compliance, and international market access solutions across the full product lifecycle.
                 </p>
               </div>
 
               {/* Description - Shorter on mobile */}
               <p className="text-xs md:text-sm lg:text-base text-white/85 max-w-xl leading-relaxed">
-                We help manufacturers and innovators achieve <span className="text-brand-cyan font-semibold">DRAP compliance</span>, 
-                <span className="text-brand-teal font-semibold"> cGMP readiness</span>, dossier approvals and 
-                <span className="text-brand-cyan font-semibold"> export market access</span> with pragmatic regulatory strategy and operational support.
+                We engage manufacturers, emerging pharmaceutical enterprises, and healthcare product developers with senior-level counsel spanning <span className="text-brand-cyan font-semibold">regulatory strategy</span>, 
+                <span className="text-brand-teal font-semibold"> GMP compliance</span>, dossier development, validation sciences, and <span className="text-brand-cyan font-semibold">international market access</span>.
               </p>
 
               {/* CTA Buttons - Stack on mobile, touch-friendly sizing */}
@@ -83,7 +82,7 @@ const Hero = () => {
                   className="group px-5 py-2.5 md:px-8 md:py-4 text-sm md:text-lg font-semibold bg-brand-blue hover:bg-brand-blue-dark shadow-lg shadow-brand-blue/30 transition-all duration-300 hover:shadow-brand-blue/50 min-h-[44px]"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Explore Services
+                    Explore Our Services
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
@@ -110,10 +109,10 @@ const Hero = () => {
               {/* Feature Tags - Smaller on mobile, wrap better */}
               <div className="flex flex-wrap gap-1.5 md:gap-3 pt-1 md:pt-4">
                 {[
-                  { text: 'DRAP Dossier Prep', icon: '📋' },
-                  { text: 'GMP Compliance', icon: '✅' },
-                  { text: 'Export Ready', icon: '🌍' },
-                  { text: 'Fast Approvals', icon: '⚡' }
+                  { text: 'Regulatory Strategy', icon: '📋' },
+                  { text: 'GMP Governance', icon: '✅' },
+                  { text: 'Market Access', icon: '🌍' },
+                  { text: 'Validation Sciences', icon: '⚡' }
                 ].map((tag, idx) => (
                   <span
                     key={idx}
@@ -140,17 +139,17 @@ const Hero = () => {
                         <span className="text-3xl" role="img" aria-label="target">🎯</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white">Expert Guidance</h3>
-                        <p className="text-white/70 text-sm">Navigate regulations with confidence</p>
+                          <h3 className="text-xl font-bold text-white">Integrated Advisory</h3>
+                          <p className="text-white/70 text-sm">Senior counsel across compliance, quality, and market access</p>
                       </div>
                     </div>
                     
                     <div className="space-y-3">
                       {[
-                        'DRAP Registration Success',
-                        'International Compliance',
-                        'Market Access Strategy',
-                        'End-to-End Support'
+                          'Regulatory intelligence and submission strategy',
+                          'GMP alignment and inspection readiness',
+                          'International registration and export pathways',
+                          'Validation and quality governance support'
                       ].map((item, idx) => (
                         <div
                           key={idx}

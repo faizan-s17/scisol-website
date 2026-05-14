@@ -13,10 +13,11 @@ const CTA = () => {
       <div className="hidden md:block absolute inset-0 pointer-events-none -z-10" style={{ background: 'radial-gradient(60% 40% at 10% 20%, rgba(56,189,248,0.06), transparent 20%), radial-gradient(50% 40% at 90% 80%, rgba(11,102,209,0.04), transparent 25%)' }} />
       <Container>
         <div className="text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3">Ready to Start Your Project?</h2>
-          <p className="text-base md:text-lg text-white/90 mb-6 max-w-2xl mx-auto">Let's collaborate to ensure regulatory compliance, accelerate approvals, and open export pathways for your products.</p>
-          <div className="flex justify-center">
-            <Button onClick={() => navigate('/contact')} className="min-h-[44px] px-6 py-2.5 md:px-8 md:py-3">Contact Us Now</Button>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3">Ready to Elevate Your Compliance Posture?</h2>
+          <p className="text-base md:text-lg text-white/90 mb-6 max-w-2xl mx-auto">Engage with our team for a confidential preliminary consultation to discuss your organisation’s regulatory and compliance objectives.</p>
+          <div className="flex justify-center flex-col sm:flex-row gap-3 sm:gap-4">
+            <Button onClick={() => navigate('/contact')} className="min-h-[44px] px-6 py-2.5 md:px-8 md:py-3">Request a Consultation</Button>
+            <Button variant="secondary" onClick={() => navigate('/contact')} className="min-h-[44px] px-6 py-2.5 md:px-8 md:py-3 border-2 border-white/30 hover:border-brand-cyan hover:bg-brand-cyan/10">Contact Our Team</Button>
           </div>
         </div>
       </Container>

@@ -6,26 +6,30 @@ import SectionBackground from '../ui/SectionBackground'
 const WhyChoose = () => {
  const features = [
     {
-      title: 'Pakistan-Focused Expertise',
-      description: 'Deep understanding of DRAP, PPMA dynamics and local challenges.'
+      title: 'Regulatory Intelligence',
+      description: 'Continuous monitoring of evolving international regulatory landscapes to keep clients ahead of compliance obligations and market entry requirements.'
     },
     {
-      title: 'Global Export Acceleration',
-      description: 'Pathways to overcome cGMP/SRA barriers for higher-value markets.'
+      title: 'Technical Precision',
+      description: 'Deep scientific expertise across pharmaceutical science, validation, quality systems, and engineering — applied with methodological rigour to every engagement.'
     },
     {
-      title: 'Speed & Zero-Rejection Focus',
-      description: 'Fast DRAP turnarounds and accurate dossier preparation.'
+      title: 'Bespoke Solutions',
+      description: 'No templated approaches. Every engagement is designed around the specific strategic, operational, and regulatory context of the client organisation.'
+    },
+    {
+      title: 'Global Market Access',
+      description: 'End-to-end support for international registration strategy, export market development, and representation before regulatory authorities worldwide.'
     }
   ]
 
  return (
     <SectionBackground variant="odd" className="py-16">
       <Container>
-        <SectionTitle title="Why Choose Sci‑Sol" subtitle="Regulatory Partner for Pakistan" centered={true} />
-        <p className="text-center text-muted-slate max-w-3xl mx-auto mb-10">Leverage Pakistan's momentum with specialist regulatory support focused on approvals, compliance, and exports.</p>
+        <SectionTitle title="Four Pillars of Integrated Advisory" subtitle="Our Approach" centered={true} />
+        <p className="text-center text-muted-slate max-w-4xl mx-auto mb-10">Scientific Solutions combines strategic foresight, technical discipline, and international perspective to deliver advisory support that is calibrated to the realities of pharmaceutical regulation and market execution.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="card card-glass p-6">
               <div className="flex items-start space-x-4">

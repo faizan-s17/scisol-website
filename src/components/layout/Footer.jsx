@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h4 className="text-xl font-bold mb-3">Sci-Sol</h4>
-            <p className="text-sm text-gray-300 leading-relaxed">Regulatory consulting partner for Pakistan's pharmaceutical, medical device and nutraceutical sectors. DRAP compliance, export readiness, dossier preparation, and lifecycle support.</p>
+            <h4 className="text-xl font-bold mb-3">Scientific Solutions</h4>
+            <p className="text-sm text-gray-300 leading-relaxed">An independent multidisciplinary advisory platform serving the pharmaceutical, biologics, medical device, and healthcare product sectors with integrity, expertise, and global perspective.</p>
           </div>
 
           <div>
@@ -25,10 +25,17 @@ const Footer = () => {
           <div>
             <h5 className="font-semibold mb-2">Services</h5>
             <ul className="text-sm text-gray-300 space-y-2">
-              <li>DRAP Dossier Preparation</li>
-              <li>Medical Device Registration</li>
-              <li>GMP & cGMP Readiness</li>
-              <li>Export Pathways & Certificates</li>
+              <li><Link to="/services" className="hover:text-brand-cyan">Regulatory Submission Strategy</Link></li>
+              <li><Link to="/services" className="hover:text-brand-cyan">GMP Compliance Advisory</Link></li>
+              <li><Link to="/services" className="hover:text-brand-cyan">Validation & Qualification</Link></li>
+              <li><Link to="/services" className="hover:text-brand-cyan">Market Access & Registration</Link></li>
+            </ul>
+            <h5 className="font-semibold mb-2 mt-5">Sectors</h5>
+            <ul className="text-sm text-gray-300 space-y-2">
+              <li><Link to="/industries" className="hover:text-brand-cyan">Pharmaceutical Manufacturing</Link></li>
+              <li><Link to="/industries" className="hover:text-brand-cyan">Biological Products & Biosimilars</Link></li>
+              <li><Link to="/industries" className="hover:text-brand-cyan">Medical Devices</Link></li>
+              <li><Link to="/industries" className="hover:text-brand-cyan">Public Health & Government Institutions</Link></li>
             </ul>
           </div>
 
@@ -92,7 +99,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-6 text-sm text-gray-400 text-center">
-          <p>&copy; 2026 Sci-Sol Regulatory Consulting. All Rights Reserved.</p>
+          <p>&copy; 2026 Scientific Solutions. All Rights Reserved.</p>
+          <p className="mt-2">
+            <a href="https://skyweb.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan">Developed by SKYWEB</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -35,30 +35,30 @@ const Statistics = () => {
 
   const stats = [
     { 
-      value: 750, 
+      value: 30, 
       suffix: '+', 
-      label: 'Pharma Manufacturers Supported', 
+      label: 'Senior pharmaceutical professionals', 
       icon: FaIndustry,
       color: 'text-brand-cyan'
     },
     { 
-      value: 15, 
+      value: 25, 
       suffix: '+', 
-      label: 'Export Markets', 
+      label: 'Regulatory authority engagements', 
       icon: FaGlobe,
       color: 'text-brand-teal'
     },
     { 
-      value: 98, 
-      suffix: '%', 
-      label: 'Approval Success Rate', 
+      value: 20, 
+      suffix: '+', 
+      label: 'GMP inspection and remediation programmes', 
       icon: FaCheckDouble,
       color: 'text-green-400'
     },
     { 
-      value: 10, 
+      value: 15, 
       suffix: '+', 
-      label: 'Regulatory Experts', 
+      label: 'Executive advisory disciplines', 
       icon: FaUsers,
       color: 'text-purple-400'
     }
@@ -74,10 +74,10 @@ const Statistics = () => {
 
       <div className="relative z-10">
         <Container>
-          <SectionTitle title="By the Numbers" subtitle="Proven Results & Impact" centered={true} />
+          <SectionTitle title="Guided by Decades of Distinction" subtitle="Leadership and governance" centered={true} />
           
           <p className="text-center text-muted-slate max-w-2xl mx-auto mb-12">
-            Our track record speaks for itself. We've helped hundreds of pharmaceutical companies navigate complex regulatory landscapes successfully.
+            Scientific Solutions is led by senior pharmaceutical professionals with direct experience across regulatory authority interfaces, GMP inspection environments, quality governance, and executive-level compliance leadership.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
@@ -121,7 +121,7 @@ const Statistics = () => {
           <div className="mt-8 md:mt-16 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-navy/90 border border-brand-cyan/30 rounded-full text-white text-xs md:text-sm shadow-lg">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-hidden="true"></span>
-              <span className="font-medium">Trusted by industry leaders across Pakistan and beyond</span>
+              <span className="font-medium">Leadership shaped by inspection experience, governance depth, and disciplined execution</span>
             </div>
           </div>
         </Container>
